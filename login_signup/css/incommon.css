@@ -1,0 +1,95 @@
+html{
+    height: 100%;
+}
+body{
+    background-image: url("https://cdn.dday.it/system/uploads/news/main_image/22502/main_polaroid-camera-invented_396b1206b4ce33ca.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    font-size: 18px;
+    height: 100%;
+}
+
+@media (max-width: 600px){
+    body{
+        font-size: 15px;
+    }
+}
+
+.nascosto{
+    display: none;
+}
+
+
+#nome{
+    color: white;
+    font-size: 40px;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+@media (max-width: 600px){
+    #nome{
+        font-size: 30px;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(58, 28, 0);
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    height: calc(100% - 70px);
+}
+
+
+
+@media (max-width: 600px){
+    main{
+        height: calc(100% - 44px);
+    }
+}
+
+
+
+.errore {
+    color: rgb(109, 0, 0);
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    text-decoration: none;
+    color: rgb(21, 37, 73);
+}
+
+form{
+    background-color: rgba(170, 160, 160, 0.514);
+    max-width: 580px;
+    /*background: white;*/
+    padding: 20px 20px 10px 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.form-control{
+    margin-bottom: 3px;
+}
+
+#login,
+#signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.btn{
+    font-weight: bold; 
+    margin-top: 5px;
+}

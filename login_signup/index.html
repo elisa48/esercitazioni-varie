@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/incommon.css" />
+    <script src="js/index.js" defer></script>
+    <script src="js/incommon.js" defer></script>
+</head>
+<body>
+    <div id=nome>
+        FrameLife 2.0
+    </div>
+    
+    <main>
+        <form name='login' method='post' action="home.html" >
+            <input type='text' name='nome_utente' class="form-control" placeholder="Nome Utente">
+        
+            <input type='password' name='password' class="form-control" placeholder="Password">
+            <div id="credenziali" class='errore nascosto'>
+                Credenziali non valide
+            </div>
+            <button type='submit' class="btn btn-success">
+                Accedi
+            </button>
+            
+            <div id="signup">
+                <a href="signup.html">Non sei iscritto? Join us!</a>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/incommon.css" />
+    <script src="js/signup.js" defer></script>
+    <script src="js/incommon.js" defer></script>
+</head>
+<body>
+    <div id=nome>
+        FrameLife 2.0
+    </div>
+    <main>
+        <form name='iscrizione' method='post' action="home.html">
+            <input type='text' name='nome' class="form-control" placeholder="Nome">
+            <input type='text' name='cognome' class="form-control" placeholder="Cognome">
+            <input type='email' name='email' class="form-control" placeholder="Email">
+            <div id="errore_email" class="nascosto errore">Email non valida</div>
+            <input id='nome_utente' type='text' name='nome_utente' class="form-control"placeholder="Nome Utente">
+            <div id="utente" class="nascosto errore">Nome Utente non disponibile</div>
+            <input type='password' name='password' class="form-control" placeholder="Password">
+            <input type='password' name='conferma_password' class="form-control" placeholder="Conferma Password"> 
+            <div id = password class="nascosto errore" >Le password non coincidono</div>
+            <button type='submit' class="btn btn-success">
+                Iscriviti
+            </button>
+            <div id = campiPieni class="nascosto errore" >Compilare tutti i campi!</div>
+            
+            <div id="login">
+                <a href="index.html">Già iscritto? Vai alla login!</a>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
