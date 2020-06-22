@@ -31,13 +31,23 @@ function addSecond() {
         minutes++;
     }
     // parte da 00:01
-    if (seconds < 10) {
-        gameTimer.textContent = "0" + minutes + ":" + "0" + seconds;
-    } else {
-        gameTimer.textContent = "0" + minutes + ":" + seconds;
+    if(minutes<10){
+        if (seconds < 10) {
+            gameTimer.textContent = "0" + minutes + ":" + "0" + seconds;
+        } else {
+            gameTimer.textContent = "0" + minutes + ":" + seconds;
+        }
+        // richiama setTimer per impostare la nuova chiamata ad addSeconds    
+    }else{
+        if (seconds < 10) {
+            gameTimer.textContent = minutes + ":" + "0" + seconds;
+        } else {
+            gameTimer.textContent = minutes + ":" + seconds;
+        }
+        // richiama setTimer per impostare la nuova chiamata ad addSeconds
+    
     }
-    // richiama setTimer per impostare la nuova chiamata ad addSeconds
-
+    
 }
 
 function startGameTimer() {
@@ -76,7 +86,7 @@ function stopGameTimer() {
     cardsDisabling();
     // salvataggio in localStorage
     let card_rimaste=cardRimanenti();
-    giocatori.push(new Giocatore(name.value, gameTimer.textContent, card_rimaste));
+    giocatori.push(new Giocatore(name.value, minutes, seconds, card_rimaste));
     LS.save();
     // flush del timer
     alert(`Complimenti ${name.value}, hai finito in ${gameTimer.textContent} secondi e hai lasciato ${card_rimaste} carte! 
@@ -85,9 +95,12 @@ Inserisci un nuovo nome, premi su stard e comincia una nuova partita!`);
     stopTimerButton.disabled=true;
     startTimerButton.disabled = false;
     gameTimer.textContent="00:00";
+    minutes=0;
+    seconds=0;
     name.value="";
     name.disabled=false;
     reset();
+    stampaRisultati();
 }
 
 /* - Fine regione per timer -*/

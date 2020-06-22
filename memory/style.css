@@ -5,9 +5,17 @@
     background-color: transparent;
     /*border: 1px solid #f1f1f1;*/
     perspective: 1000px;
-    width: 150px;
-    height: 220px;
+    width: 130px;
+    height: 180px;
     /* Remove this if you don't want the 3D effect */
+}
+
+.riga{
+    height: 180px;
+}
+.col-3{
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width:576px){
@@ -32,7 +40,13 @@
     max-width: 100%;
 }
 
+ol{
+    padding: 0px;
+}
 
+#dicitura{
+    font-size: 12px;
+}
 
 /* This container is needed to position the front and back side */
 
@@ -41,8 +55,8 @@
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-    width: 150px;
-    height: 220px;
+    width: 130px;
+    height: 180px;
 }
 
 @media (max-width:576px){   
@@ -57,6 +71,34 @@
 
 .scompari {
     display: none;
+}
+
+#sezione_carte{
+    background: green;
+    
+}
+
+@media(min-width:576px){
+    #classifica_inferiore{
+        display: none;
+    }
+   
+}
+
+@media(max-width:768px){
+    #classifica_superiore{
+        font-size: 14px;
+    }
+
+    
+}
+
+
+@media(max-width:576px){
+    #classifica_superiore{
+        display: none;
+    }
+    
 }
 
 .selezionate {
@@ -81,17 +123,17 @@
 
 
 /* Position the front and back side */
-.row{
+/*.row{
     max-height: calc(100% / 3);
-}
+}*/
 .flip-card-front,
 .flip-card-back {
     display: flex;
     justify-content: center;
     align-items:center;
     position: absolute;
-    width: 150px;
-    height: 220px;
+    width: 130px;
+    height: 180px;
     -webkit-backface-visibility: hidden;
     /* Safari */
     backface-visibility: hidden;
@@ -99,8 +141,8 @@
 
 .flip-card-front img,
 .flip-card-back img {
-    width: 150px;
-    height: 220px;
+    width: 130px;
+    height: 180px;
 }
 
 @media (max-width:576px){
